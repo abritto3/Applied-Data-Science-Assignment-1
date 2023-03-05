@@ -4,12 +4,15 @@ Created on Sat Mar  4 23:25:12 2023
 
 @author: Akhil Jose Britto
 """
-#Importing the modules
+
+''''Importing the modules '''
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Defining the Line Plot showing growth % in GDP
+''''Defining the Line Plot showing growth % in GDP'''
+
 def line_plot():
     plt.figure()
     #Plotting a line plot with the year in x-axis and each corresponding country in the y-axis
@@ -31,7 +34,8 @@ def line_plot():
     plt.show()
 
 
-#Defining the Bar Plot comparing male vs female unemployment rate
+''''Defining the Bar Plot comparing male vs female unemployment rate'''
+
 def bar_plot():
     plt.figure()
     #Form 4 Subplots of shape 2x2
@@ -77,7 +81,9 @@ def bar_plot():
     plt.tight_layout()
     plt.show()
 
-#Defining the Scatter Plot showing average growth in GDP over the period in the line plot
+
+'''Defining the Scatter Plot showing average growth in GDP over the period in the line plot '''
+
 def scatter_plot():
     plt.figure()
     #Scatter plot points with the Country name on the x-axis and the average value right above it on the y-axis
@@ -101,7 +107,9 @@ def scatter_plot():
     plt.title("Average GDP Growth through 2007 - 2016")
     plt.show()
 
-#Defining the Pie Chart comparing combined Male and Fermale Unemployment between the years 2010 and 2014
+
+''''Defining the Pie Chart comparing combined Male and Fermale Unemployment between the years 2010 and 2014 '''
+
 def pie_chart():
     plt.figure()
     #Create 2 sub plot pie charts of shape 1x2
@@ -123,7 +131,8 @@ def pie_chart():
     plt.legend(labels = male_unemployment.iloc[:,1:],bbox_to_anchor=(1.5,0.95))
     plt.show()
 
-#Main program
+
+'''Main program '''
 
 #Line and Scatter Plot data
 gdp_growth = pd.read_excel(r"C:\Users\HP\OneDrive - University of Hertfordshire\Assignments\GDP growth.xlsx")
@@ -146,7 +155,8 @@ female_unemployment = pd.read_excel(r"C:\Users\HP\OneDrive - University of Hertf
 year = np.array(male_unemployment['Year'])
 #Taking the year column from the data frame which is common to both Male and Female Graphs 
 
-#Excecute the graphs    
+'''Excecute the graphs    '''
+
 line_plot()
 bar_plot()
 scatter_plot()
